@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+        }
+        #myDiv {
+            background-color: blueviolet;
+            border-radius: 10px;
+            height: 100px;
+            padding-top: 70px;
+            text-align: center;
+            width: 150px;
+        }
+    </style>
+</head>
+<body>
+    <div id="myDiv">
+        Learning Axis
+    </div>
+    <script>
+        var x = document.getElementById("myDiv");
+        var deg = 0;
+        window.setInterval(function (){
+            deg = deg + 3;
+            if (deg > 360) {
+                deg = deg - 360;
+            }
+            x.style.transform = "rotateY(" + deg.toString() + "deg)";
+        }, 16);
+    </script>
+</body>
+</html>
